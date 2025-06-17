@@ -1,6 +1,5 @@
-import Button, { ButtonProps } from "../../shared/Button/Button"
 import TextInput from "../../shared/Text/Text"
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useState } from "react"
 import "./Autocomplete.css"
 import { observer } from "mobx-react"
 import AutocompleteVM from "./AutocompleteVM"
@@ -17,7 +16,6 @@ const Autocomplete = observer((props: autocompleteProps) => {
     const { vm, count } = props
     const [forceClosed, setForseClosed] = useState(false)
     const handleChange = useCallback((event: React.ChangeEvent<HTMLTextAreaElement>) => {
-        //to-do action
         vm.setText(event)
         vm.debouncedFetchCountries(event)
         setForseClosed(false)
@@ -40,6 +38,7 @@ const Autocomplete = observer((props: autocompleteProps) => {
             return <DropdownList count={count} countries={vm.countries} onClick={handleClick}></DropdownList>
         }
     }
+
     return <div className="autocomplete">
         <TextInput value={vm.text} onChange={handleChange}></TextInput>
         {renderDropDown()}

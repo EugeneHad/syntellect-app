@@ -1,8 +1,6 @@
-import { makeAutoObservable } from "mobx"
 import BtnsAndTxtModel from "./BtnsAndTxtModel"
-import Button, { ButtonProps } from "../../shared/Button/Button"
-import baseViewModel from "../../shared/baseClass/baseViewModel"
-//dispose по доке mobx
+import baseViewModel from "../baseVM/baseViewModel"
+
 class BtnAndTxtModelVM extends baseViewModel<BtnsAndTxtModel> {
     constructor(model: BtnsAndTxtModel) {
         super(model)

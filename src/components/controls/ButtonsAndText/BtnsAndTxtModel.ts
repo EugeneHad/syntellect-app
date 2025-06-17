@@ -1,4 +1,4 @@
-import { baseModel } from "../../shared/baseClass/baseViewModel"
+import { baseModel } from "../baseVM/baseViewModel"
 import { ButtonProps } from "../../shared/Button/Button"
 import { makeAutoObservable } from "mobx"
 

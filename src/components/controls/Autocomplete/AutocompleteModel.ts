@@ -2,7 +2,7 @@
 // "flag":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/50px-Flag_of_Austria.svg.png"}
 import { flow, makeAutoObservable } from "mobx"
 import { getCountryByName, CountryInfo } from "../../../api/apiService"
-import { baseModel } from "../../shared/baseClass/baseViewModel"
+import { baseModel } from "../baseVM/baseViewModel"
 
 
 class AutocompleteModel implements baseModel {
